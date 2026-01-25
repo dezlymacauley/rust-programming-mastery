@@ -2,7 +2,7 @@ use topic_01_struct_basics::Student;
 
 fn main() {
 
-    let new_student = Student {
+    let new_student: Student = Student {
         name: "zack".to_string(),
         age: 21,
     };
