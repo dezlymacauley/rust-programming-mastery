@@ -5,6 +5,9 @@ edition = "2024"
 
 [workspace]
 resolver = "3"
-members = ["section-01-structs/*"]
+members = [
+    "section-01-structs/*", 
+    "section-02-file-systems/*"
+]
 
 [workspace.dependencies]

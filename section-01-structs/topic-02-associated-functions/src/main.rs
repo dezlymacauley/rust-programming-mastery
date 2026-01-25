@@ -1,4 +1,4 @@
-use topic_02_impl_blocks::Student;
+use topic_02_associated_functions::Student;
 
 fn main() {
     let mut new_student = Student::new("zack", 21);
