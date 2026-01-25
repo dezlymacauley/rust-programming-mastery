@@ -1,0 +1,6 @@
+[package]
+name = "topic-03-std-path-path"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
