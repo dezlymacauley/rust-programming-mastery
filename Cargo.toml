@@ -6,8 +6,9 @@ edition = "2024"
 [workspace]
 resolver = "3"
 members = [
-    "section-01-structs/*", 
-    "section-02-file-systems/*"
+    "section-01-vectors/*", 
+    "section-02-structs/*", 
+    "section-03-file-systems/*"
 ]
 
 [workspace.dependencies]

@@ -17,3 +17,7 @@ version = "0.1.0"
 [[package]]
 name = "topic-02-associated-functions"
 version = "0.1.0"
+
+[[package]]
+name = "topic-vector-basics"
+version = "0.1.0"
