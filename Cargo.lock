@@ -5,3 +5,11 @@ version = 4
 [[package]]
 name = "rust-programming-mastery"
 version = "0.1.0"
+
+[[package]]
+name = "topic-01-struct-basics"
+version = "0.1.0"
+
+[[package]]
+name = "topic-02-impl-blocks"
+version = "0.1.0"
