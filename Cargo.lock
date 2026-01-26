@@ -47,5 +47,5 @@ name = "topic-04-creating-a-reference-of-a-section-of-a-vector"
 version = "0.1.0"
 
 [[package]]
-name = "topic-05-accessing-elements-safely-with-the-dot-get-method"
+name = "topic-05-vector-methods"
 version = "0.1.0"

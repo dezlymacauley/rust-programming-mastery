@@ -3,11 +3,10 @@
 
 */
 fn main() {
-   
     //_________________________________________________________________________
-    
+
     // SECTION: How to view an element at a specific index
-    
+
     let list_of_numbers: Vec<u16> = vec![15, 8, 27];
     // index 0 = 15
     // index 1 = 8
@@ -38,4 +37,21 @@ fn main() {
 
     //_________________________________________________________________________
 
+    // SECTION: How to remove an element at a specific index
+
+    let index_to_remove: usize = 4;
+
+    if index_to_remove < list_of_names.len() {
+        list_of_names.remove(index_to_remove);
+    } else {
+        println!("There is no element at index {index_to_remove}");
+        println!(
+            "The last index in the list is at index {}",
+            (list_of_names.len() - 1)
+        );
+    }
+
+    println!("list_of_names: {list_of_names:?}");
+
+    //_________________________________________________________________________
 }
