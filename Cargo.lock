@@ -31,9 +31,17 @@ name = "topic-02-enforcing-the-number-of-args"
 version = "0.1.0"
 
 [[package]]
+name = "topic-03-creating-a-vector-with-repeated-values"
+version = "0.1.0"
+
+[[package]]
 name = "topic-03-std-path-path"
 version = "0.1.0"
 
 [[package]]
 name = "topic-04-crawling-the-filesystem"
+version = "0.1.0"
+
+[[package]]
+name = "topic-04-creating-a-reference-of-a-section-of-a-vector"
 version = "0.1.0"

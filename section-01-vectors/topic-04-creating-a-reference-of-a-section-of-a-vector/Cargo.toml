@@ -1,0 +1,6 @@
+[package]
+name = "topic-04-creating-a-reference-of-a-section-of-a-vector"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
