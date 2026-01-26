@@ -17,6 +17,14 @@
 use std::path::Path;
 
 fn main() {
+    // Path::new() accepts a string slice &str or a reference to a String,
+    // and returns &Path.
+    //
+    // Use Path::new() when you only need to read a path to work with it
+    // and you don't care about ownership.
+    //
+    // If you do care about ownership and need to modify or join 
+    // file paths, then use PathBuf instead.
     let file_path: &Path = Path::new("csv-files/example.csv");
 
     if file_path.exists() == false {
