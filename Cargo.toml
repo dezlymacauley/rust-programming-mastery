@@ -8,7 +8,7 @@ resolver = "3"
 members = [
     "section-01-vectors/*", 
     "section-02-structs/*", 
-    "section-03-file-systems/*"
-]
+    "section-03-file-systems/*",
+    "section-04-dynamic-programming/*"]
 
 [workspace.dependencies]

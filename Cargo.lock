@@ -7,6 +7,10 @@ name = "rust-programming-mastery"
 version = "0.1.0"
 
 [[package]]
+name = "topic-01"
+version = "0.1.0"
+
+[[package]]
 name = "topic-01-env-args"
 version = "0.1.0"
 
