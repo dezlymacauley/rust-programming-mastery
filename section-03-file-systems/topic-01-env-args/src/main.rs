@@ -12,6 +12,67 @@
     let iterator_of_cli_arguments: Args = env::args();
 
     //_________________________________________________________________________
+    
+    // ABOUT: What is the point of env::args() ?
+
+    When you enter text into the command line (aka terminal), 
+    the shell (this can be bash, zsh or something else) parses it.
+
+    Two major rules are applied:
+    - Whitespace separates arguments
+    - Quotes are used to prevent an argument from splitting
+
+    - Some non-Unix shells may behave differently.
+
+    The raw arguments are collected as a list (aka array) 
+    of text-like values provided by the OS.
+    
+    E.g. If you type dezly macauley, the list becomes:
+    "program path", "dezly", "macauley"
+
+    After the shell has done this, it then calls the OS 
+    to start your program.
+
+    Depending on the operating systems, the list of text
+    containing the cli arguments may be handled and formatted differently.
+
+    So for safety reasons and cross-platform compatibility,
+    `env::args()` exposes those OS-provided arguments 
+    as the data type `Args`
+
+    `env::args()` prepares the CLI arguments for use in Rust,
+    by converting each argument into an owned UTF-8 String, 
+    that can be iterated over.
+
+    If the cli arguments are not valid Unicode, then `env::args()` may fail.
+
+    `Iterated over` simply means that you can go through the list and read
+    the value of each element in the list and perform some action on each
+    element.
+
+    An iterator does not have indexes, it just provides a way to go to
+    the next element until you reach the end:
+
+    It would look something like this:
+    next() -> Option<Item>
+    next() -> Option<Item>
+    next() -> Option<Item>
+    next() -> None
+
+    To store the arguments from `env::args()` into a variable,
+    you need to use the `.collect()` method and specify what format you
+    want the list to be in. E.g. `Vec<String>`
+
+    Once it is in this Vector form then you can target a specific element by
+    its index.
+
+    E.g. If you the program was run with the argument dezly macauley, 
+    then the Vector would be:
+
+    index 0,        index 1   index 2
+    "program path", "dezly", "macauley"
+    
+    //_________________________________________________________________________
 
 */
 

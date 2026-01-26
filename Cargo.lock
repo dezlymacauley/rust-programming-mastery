@@ -23,7 +23,11 @@ name = "topic-02-enforcing-the-number-of-args"
 version = "0.1.0"
 
 [[package]]
-name = "topic-03-std-path"
+name = "topic-03-std-path-path"
+version = "0.1.0"
+
+[[package]]
+name = "topic-04-crawling-the-filesystem"
 version = "0.1.0"
 
 [[package]]
