@@ -1,5 +1,5 @@
 [package]
-name = "topic-01-vector-basics"
+name = "topic-02-accessing-vector-elements"
 version = "0.1.0"
 edition = "2024"
 

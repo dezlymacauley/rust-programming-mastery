@@ -15,6 +15,14 @@ name = "topic-01-struct-basics"
 version = "0.1.0"
 
 [[package]]
+name = "topic-01-vector-basics"
+version = "0.1.0"
+
+[[package]]
+name = "topic-02-accessing-vector-elements"
+version = "0.1.0"
+
+[[package]]
 name = "topic-02-associated-functions"
 version = "0.1.0"
 
@@ -28,8 +36,4 @@ version = "0.1.0"
 
 [[package]]
 name = "topic-04-crawling-the-filesystem"
-version = "0.1.0"
-
-[[package]]
-name = "topic-vector-basics"
 version = "0.1.0"
