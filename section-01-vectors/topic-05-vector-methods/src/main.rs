@@ -54,4 +54,28 @@ fn main() {
     println!("list_of_names: {list_of_names:?}");
 
     //_________________________________________________________________________
+
+    // SECTION: How to check if an element exists inside a vector
+
+    let deployment_options: Vec<String> = vec![
+        String::from("aws"),
+        String::from("deno-deploy"),
+        String::from("gcp"),
+    ];
+
+    let search_term: String = String::from("aws");
+
+    // .contains() accepts a reference to the data type of the elements in
+    // the vector, and it returns a bool value (true or false).
+    //
+    // deployment_options is `Vec<String>` so to use `.contains()` to 
+    // check if a value exists in it, 
+    // then you would have to give the `.contains()` the data type `&String`
+    println!(
+        "Is {search_term} a deployment option? {}",
+        deployment_options.contains(&search_term)
+    );
+    // Is aws a deployment option? true
+
+    //_________________________________________________________________________
 }
