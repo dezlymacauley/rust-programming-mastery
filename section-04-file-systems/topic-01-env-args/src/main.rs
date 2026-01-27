@@ -74,6 +74,18 @@
     
     //_________________________________________________________________________
 
+    // ABOUT: What is the difference between env:args() and std::read_line()
+
+        So .read_line() is used when you want to get user input from 
+        the user After the program has already started. This input will,
+        then control what happens next.
+
+        env:args is used when you want to supply command line arguements 
+        BEFORE the program is run. Those arguments arguments will change 
+        how the program behaves when it starts.
+
+    //_________________________________________________________________________
+
 */
 
 // Bring the `env` module from the Rust standard library into scope

@@ -43,6 +43,10 @@ name = "topic-02-functions-that-return-multiple-values"
 version = "0.1.0"
 
 [[package]]
+name = "topic-03-code-blocks"
+version = "0.1.0"
+
+[[package]]
 name = "topic-03-creating-a-vector-with-repeated-values"
 version = "0.1.0"
 
