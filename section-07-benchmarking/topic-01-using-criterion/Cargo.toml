@@ -1,0 +1,16 @@
+[package]
+name = "topic-01-using-criterion"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+criterion = "0.8.1"
+
+[[bench]]
+# This is the name of the file that contains the benchmark tests
+# This file must be inside of a directory called benches
+name = "sorting_benchmarks"
+
+# Disables Rust's built-in benchmark functionality 
+# so that criterion is used instead.
+harness = false
