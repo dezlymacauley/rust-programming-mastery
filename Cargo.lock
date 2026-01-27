@@ -7,11 +7,11 @@ name = "rust-programming-mastery"
 version = "0.1.0"
 
 [[package]]
-name = "topic-01"
+name = "topic-01-env-args"
 version = "0.1.0"
 
 [[package]]
-name = "topic-01-env-args"
+name = "topic-01-function-basics"
 version = "0.1.0"
 
 [[package]]
@@ -36,6 +36,10 @@ version = "0.1.0"
 
 [[package]]
 name = "topic-02-enforcing-the-number-of-args"
+version = "0.1.0"
+
+[[package]]
+name = "topic-02-functions-that-return-multiple-values"
 version = "0.1.0"
 
 [[package]]

@@ -1,5 +1,5 @@
 /*
-    ABOUT: Functions
+    ABOUT: Function Basics
 
     A function is a named block of code that optionally accepts input,
     performs some actions, and optionally returns a value a multiple values.
@@ -61,14 +61,6 @@ fn main() {
     println!("{num_apples} + {num_peaches} = {total_fruits}");
     // 20 + 10 = 30
 
-    let value_a: i32 = 2; 
-    let value_b: i32 = 5; 
-
-    let (doubled_a, doubled_b) = double_each_number(value_a, value_b);
-    println!("{value_a} doubled is {doubled_a}");
-    println!("{value_b} doubled is {doubled_b}");
-    // 2 doubled is 4
-    // 5 doubled is 10
 }
 
 //_____________________________________________________________________________
@@ -101,17 +93,6 @@ fn add_two_integers(num1: i32, num2: i32) -> i32 {
     // In other programming language using a `return` statement is used.
     // This is also valid in Rust.
     // return num1 + num2;
-}
-
-// This is a function that has multiple inputs and outputs
-// When you want a function to return multiple data types,
-// then you have to use a tuple `()` and specify the data type of each
-// element that is returned by the function
-fn double_each_number(num1: i32, num2: i32) -> (i32, i32) {
-    let doubled_num1 = num1 * 2;
-    let doubled_num2 = num2 * 2;
-
-    (doubled_num1, doubled_num2)
 }
 
 //_____________________________________________________________________________
