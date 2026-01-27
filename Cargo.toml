@@ -12,6 +12,7 @@ members = [
     "section-04-structs/*", 
     "section-05-file-systems/*",
     "section-06-dynamic-programming/*",
-    "section-07-benchmarking/*"]
+    "section-07-data-structures/*",
+    "section-08-benchmarking/*"]
 
 [workspace.dependencies]
