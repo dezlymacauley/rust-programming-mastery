@@ -7,9 +7,11 @@ edition = "2024"
 resolver = "3"
 members = [
     "section-01-vectors/*", 
-    "section-02-functions-and-modularization/*",
-    "section-03-structs/*", 
-    "section-04-file-systems/*",
-    "section-05-dynamic-programming/*"]
+    "section-02-functions/*",
+    "section-03-user-input/*", 
+    "section-04-structs/*", 
+    "section-05-file-systems/*",
+    "section-06-dynamic-programming/*"
+]
 
 [workspace.dependencies]
