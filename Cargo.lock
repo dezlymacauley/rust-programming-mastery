@@ -15,6 +15,10 @@ name = "topic-01-env-args"
 version = "0.1.0"
 
 [[package]]
+name = "topic-01-staircase-problem"
+version = "0.1.0"
+
+[[package]]
 name = "topic-01-struct-basics"
 version = "0.1.0"
 
