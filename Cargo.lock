@@ -547,6 +547,10 @@ name = "topic-04-prompting-for-user-input"
 version = "0.1.0"
 
 [[package]]
+name = "topic-05"
+version = "0.1.0"
+
+[[package]]
 name = "topic-05-using-shadowing"
 version = "0.1.0"
 
