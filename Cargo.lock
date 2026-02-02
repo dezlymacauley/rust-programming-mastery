@@ -468,10 +468,6 @@ name = "topic-01-function-basics"
 version = "0.1.0"
 
 [[package]]
-name = "topic-01-lib-dot-rs"
-version = "0.1.0"
-
-[[package]]
 name = "topic-01-singly-linked-list"
 version = "0.1.0"
 
@@ -519,10 +515,6 @@ name = "topic-02-functions-that-return-multiple-values"
 version = "0.1.0"
 
 [[package]]
-name = "topic-02-multiple-modules"
-version = "0.1.0"
-
-[[package]]
 name = "topic-03"
 version = "0.1.0"
 
@@ -535,7 +527,7 @@ name = "topic-03-creating-a-vector-with-repeated-values"
 version = "0.1.0"
 
 [[package]]
-name = "topic-03-modules"
+name = "topic-03-lib-dot-rs-and-modules"
 version = "0.1.0"
 
 [[package]]

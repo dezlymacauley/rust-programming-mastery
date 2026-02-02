@@ -1,5 +1,5 @@
 [package]
-name = "topic-02-multiple-modules"
+name = "topic-03-lib-dot-rs-and-modules"
 version = "0.1.0"
 edition = "2024"
 
