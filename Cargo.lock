@@ -511,6 +511,10 @@ name = "topic-02-functions-that-return-multiple-values"
 version = "0.1.0"
 
 [[package]]
+name = "topic-02-multiple-modules"
+version = "0.1.0"
+
+[[package]]
 name = "topic-03-code-blocks"
 version = "0.1.0"
 
