@@ -515,6 +515,10 @@ name = "topic-02-multiple-modules"
 version = "0.1.0"
 
 [[package]]
+name = "topic-03"
+version = "0.1.0"
+
+[[package]]
 name = "topic-03-code-blocks"
 version = "0.1.0"
 
@@ -524,6 +528,10 @@ version = "0.1.0"
 
 [[package]]
 name = "topic-03-std-path-path"
+version = "0.1.0"
+
+[[package]]
+name = "topic-04"
 version = "0.1.0"
 
 [[package]]
