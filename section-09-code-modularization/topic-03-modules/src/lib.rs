@@ -10,9 +10,14 @@
     can be import into `src/main.rs`
 
     There are three ways of adding code to `src/lib.rs`:
-    - Method 1: Put the code directly in the `src/lib.rs` module
-    - Method 2: Declare a file that contains some Rust code as a module.
-    - Method 3: multi-file example
+    - 1. Direct code declaration: 
+    Put the code directly in the `src/lib.rs` module
+
+    - 2. Single file module declaration: 
+    Declare a file that contains some Rust code as a module.
+
+    - 3. Multi-file module declaration:
+
 */
 
 //_____________________________________________________________________________
@@ -25,7 +30,7 @@
 // was declared in.
 
 pub fn say_hello(){
-    println!("Hello");
+    println!("Hello from src/lib.rs");
 }
 
 //_____________________________________________________________________________
@@ -34,7 +39,7 @@ pub fn say_hello(){
 // Declare a file that contains some Rust code as a module.
 
 // This is how you declare the file `src/module_01.rs`as a module
-pub mod module_01;
+pub mod single_file_module_01;
 
 //_____________________________________________________________________________
 
