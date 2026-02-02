@@ -468,6 +468,10 @@ name = "topic-01-function-basics"
 version = "0.1.0"
 
 [[package]]
+name = "topic-01-lib-dot-rs"
+version = "0.1.0"
+
+[[package]]
 name = "topic-01-singly-linked-list"
 version = "0.1.0"
 
