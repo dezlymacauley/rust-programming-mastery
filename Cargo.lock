@@ -484,6 +484,10 @@ name = "topic-01-struct-basics"
 version = "0.1.0"
 
 [[package]]
+name = "topic-01-the-rust-module-system"
+version = "0.1.0"
+
+[[package]]
 name = "topic-01-using-criterion"
 version = "0.1.0"
 dependencies = [
@@ -492,6 +496,10 @@ dependencies = [
 
 [[package]]
 name = "topic-01-vector-basics"
+version = "0.1.0"
+
+[[package]]
+name = "topic-02-a-package-with-multiple-binary-crates"
 version = "0.1.0"
 
 [[package]]
