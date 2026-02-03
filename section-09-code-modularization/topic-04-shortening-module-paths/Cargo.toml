@@ -1,0 +1,9 @@
+[package]
+name = "topic-04-shortening-module-paths"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "lib_dot_rs"
+
+[dependencies]

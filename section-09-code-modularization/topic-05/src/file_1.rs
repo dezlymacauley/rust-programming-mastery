@@ -1,27 +1,30 @@
-mod person {
+fn some_fn() {
+    println!("hey");
+}
 
-    pub struct PersonalInfo {
-        pub age: u8,
-        pub education: String
-    }
 
-    impl PersonalInfo {
-        pub fn new(new_edu: &str) -> Self {
-            Self {
-                education: String::from(new_edu),
-                age: 20
-            }
+// module
+mod maths {
+    
+    // sub module
+    pub mod basic_maths {
+
+        pub fn multiplication(num1: &i32, num2: &i32) -> i32 {
+            let result: i32 = num1 * num2;
+            printing(&result);
+            result
         }
+
+        fn printing(num: &i32) {
+            println!("The result is {}", num);
+            crate::file_1::some_fn();
+        }
+
     }
 
 }
 
-pub fn some_person() {
-    let mut person1 = person::PersonalInfo::new("Bachelors");
-    person1.education = String::from("Masters");
-
-    let person2: PersonalInfo = person::PersonalInfo {
-        age: 42,
-        education: String::from("Masters")
-    };
+pub fn rect_area(length: &i32, width: &i32) -> i32 {
+    use maths::basic_maths::multiplication;
+    multiplication(length, width)
 }
