@@ -2,7 +2,7 @@
     ABOUT: The Rust module system
 
     package:
-        - crates:
+        - crates
 
     package
     - A package is a bundle of one or more crates 

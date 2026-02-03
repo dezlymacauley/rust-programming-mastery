@@ -6,15 +6,15 @@ edition = "2024"
 [workspace]
 resolver = "3"
 members = [
-    "section-01-vectors/*", 
-    "section-02-functions/*",
-    "section-03-user-input/*", 
-    "section-04-structs/*", 
-    "section-05-file-systems/*",
-    "section-06-dynamic-programming/*",
-    "section-07-data-structures/*",
-    "section-08-benchmarking/*",
-    "section-09-code-modularization/*"
+    "section-01-code-modularization/*",
+    "section-02-vectors/*", 
+    "section-03-functions/*",
+    "section-04-user-input/*", 
+    "section-05-structs/*", 
+    "section-06-file-systems/*",
+    "section-07-dynamic-programming/*",
+    "section-08-data-structures/*",
+    "section-09-benchmarking/*",
 ]
 
 [workspace.dependencies]
