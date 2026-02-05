@@ -3,6 +3,9 @@ name = "rust-programming-mastery"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+name = "lib_dot_rs"
+
 [workspace]
 resolver = "3"
 members = [
