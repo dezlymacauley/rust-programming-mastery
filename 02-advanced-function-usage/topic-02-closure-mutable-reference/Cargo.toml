@@ -1,5 +1,5 @@
 [package]
-name = "topic-01-closure-immutable-reference"
+name = "topic-02-closure-mutable-reference"
 version = "0.1.0"
 edition = "2024"
 

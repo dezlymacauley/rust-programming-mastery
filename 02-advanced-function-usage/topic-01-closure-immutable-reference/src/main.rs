@@ -37,7 +37,8 @@
 */
 
 fn main() {
-    // These variable will be captured (used) by the closures below.
+    // These variable will be captured (used) by the closures below,
+    // as immutable references.
     let player_score: i32 = 30;
     let style_score: i32 = 10;
 
