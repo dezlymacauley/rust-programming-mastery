@@ -1,5 +1,5 @@
 [package]
-name = "rust-project"
+name = "topic-01-making-a-thread-sleep"
 version = "0.1.0"
 edition = "2024"
 

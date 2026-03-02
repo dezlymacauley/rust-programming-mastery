@@ -59,4 +59,10 @@ data races and dead locks
 
 Rust's concurrency model ensures that data is only owned by one thread 
 at a time.
+
+data races: when threads interact with data in an unpredictable sequence,
+leading to inconsistent outcomes. Two parts of the program racing to access
+the same resource.
+
+deadlock: two threads end up waiting for each other indefinately.
 _______________________________________________________________________________
