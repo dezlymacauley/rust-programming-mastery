@@ -1,13 +1,22 @@
 /*
     ABOUT: Closure - Immutable reference
 
-    A closure is a function that can automatically use variables from
-    the scope that it was declared in,
+    A closure is an annoymous function that can automatically 
+    use variables from the scope that it was declared in,
     without having to pass in those variables as parameters.
 
     Unlike a standard function, a closure is declared inside another function
     like `fn main()`
 
+    A closure can be saved into a new variable,
+    used to set the value of an exisiting variable, 
+    or passed in as an argument to another function.
+
+    The ability of a closure to automatically use variables from 
+    its environment when it is declared, 
+    is often refered to as "capturing variables" 
+    or "closing over variables" (That's where the name comes from)
+   
     //_________________________________________________________________________
 
     There are three ways that a closure can automatically use variables

@@ -1,0 +1,6 @@
+[package]
+name = "topic-03-creating-channels"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
