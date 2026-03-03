@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "topic-04-creating-channels-v2"
+name = "topic-03-channel-creation"
 version = "0.1.0"

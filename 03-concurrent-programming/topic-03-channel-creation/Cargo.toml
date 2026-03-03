@@ -1,5 +1,5 @@
 [package]
-name = "topic-04-creating-channels-v2"
+name = "topic-03-channel-creation"
 version = "0.1.0"
 edition = "2024"
 
