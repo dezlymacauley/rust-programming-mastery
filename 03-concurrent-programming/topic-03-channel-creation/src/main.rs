@@ -86,6 +86,11 @@ fn main() {
         println!("status_update: {status_update}");
     }
 
+    // The Receiver<T> implements the Iterator trait.
+    // The loop internally calls rx.recv() repeatedly.
+    // .recv() is blocking by default, 
+    // meaning it waits until a message is available.
+
     //_________________________________________________________________________
     
     // STEP: 4 => Add the JoinHandle to ensure that the main thread does not
