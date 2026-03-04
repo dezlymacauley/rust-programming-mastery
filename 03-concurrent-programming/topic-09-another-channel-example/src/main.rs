@@ -1,23 +1,15 @@
-use std::thread::{JoinHandle, sleep, spawn};
-
-use std::time::Duration;
+use std::sync::mpsc;
+use std::thread;
 
 fn main() {
-    let task_a_thread: JoinHandle<()> = spawn(|| {
-        // Imagine it task 1 seconds to start Task A
-        sleep(Duration::from_secs(1));
-        println!("Starting Task A...");
+    let (tx, rx) = mpsc::channel();
 
-        // Imagine it task 2 seconds to start Task A
-        sleep(Duration::from_secs(2));
-        println!("Task A completed");
+    thread::spawn(move || {
+        let val = String::from("hi");
+        println!("val is {val}");
+        tx.send(val).unwrap();
     });
 
-    println!("Task B completed");
-    println!("Task C completed");
-
-    task_a_thread.join().unwrap();
-
-    println!("Task D completed");
-
+    let received = rx.recv().unwrap();
+    println!("Got: {received}");
 }
