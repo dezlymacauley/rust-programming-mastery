@@ -1,5 +1,5 @@
 /*
-    ABOUT: Making a thread sleep
+    ABOUT: Process and thread
 
     What is a process?
 
@@ -27,22 +27,38 @@
 
 */
 
-use std::thread::sleep;
+use std::thread::{sleep, spawn, JoinHandle};
+
 use std::time::Duration;
 
 fn main() {
-
-    // This will iterate over the range of numbers from 1 to 3 (including 3)
-    // In Rust the equal sign before 3, as you can see here `(1..=3)`,
-    // makes 3 inclusive.
-    // `.rev()` means that the `for loop` will go through the range 
-    // in reverse order. So 3, 2, 1
-    for i in (1..=3).rev() {
-        // Print out each element starting from 3
-        println!("{i}");
-
-        // This will put the thread `main` to sleep for 1 second,
-        // after printing out each number.
+    let task_a_thread: JoinHandle<()> = spawn(|| {
+        // Imagine it takes 1 second to start Task A
         sleep(Duration::from_secs(1));
-    }
+        println!("Started Task A...");
+
+        // Imagine it takes 2 seconds to complete Task A
+        sleep(Duration::from_secs(2));
+        println!("Task A completed.");
+    });
+
+    println!("Task B completed.");
+    println!("Task C completed.");
+    println!("Task D completed.");
+    
+    // `.join()` is a blocking method.
+    // So the thread `fn main()` will be paused until the thread
+    // `task_a_thread` completes all of its tasks.
+    task_a_thread.join().unwrap();
 }
+
+/*
+    NOTE: This should be the output
+
+    Task B completed.
+    Task C completed.
+    Task D completed.
+    Started Task A...
+    Task A completed.
+
+*/

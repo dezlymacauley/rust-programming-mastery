@@ -52,62 +52,66 @@ fn main() {
 
     // STEP: 2 => Create a thread
 
-    // A thread to load the latest rankings of players in a video game,
-    // while the rest of the game is playable.
-
     // TIP: Don't forget the `move` keyword. The closure should take control
     // of the the sender variable, to ensure that the sender variable lives
     // for as long as the thread is valid.
 
-    let loading_player_rankings_thread = spawn(move || {
-        tx.send("Loading player ranking data...".to_string()).unwrap();
-
-        tx.send("25% done".to_string()).unwrap();
+    let task_a_thread = spawn(move || {
+        // Imagine it takes 1 second to start Task A
         sleep(Duration::from_secs(1));
 
-        tx.send("50% done".to_string()).unwrap();
-        sleep(Duration::from_secs(1));
+        // The task A sends the first status update message,
+        // to rx (The receiver)
+        tx.send("Started Task A...".to_string()).unwrap();
 
-        tx.send("75% done".to_string()).unwrap();
-        sleep(Duration::from_secs(1));
+        // Imagine it takes 2 seconds to complete Task A
+        sleep(Duration::from_secs(2));
 
-        tx.send("The loading_player_rankings_thread is done.".to_string()).unwrap();
+        // The task A then sends the second status update message,
+        // to rx (The receiver)
+        tx.send("Task A completed.".to_string()).unwrap();
     });
+
+    //_________________________________________________________________________
+
+    // STEP: 5 => Use `rx` to receive each message
+
+    // NOTE: The `.recv()` method is a blocking method.
+    // Each time you calle `.recv()`, 
+    // it will pause the thread `fn main()` until it receives the message
+    // sent by the `task_a_thread`.
+
+    let first_status_message = rx.recv().unwrap();
+    println!("{first_status_message}");
+
+    let second_status_messsage = rx.recv().unwrap();
+    println!("{second_status_messsage}");
+
+    // NOTE: This is not the best way to receive messages,
+    // I'm simply doing it this way to keep it simple.
+
+    //_________________________________________________________________________
+
+    // STEP: 4 => Add the JoinHandle to ensure that the main thread
+    // does not exit before the program ends
+
+    println!("Task B completed.");
+    println!("Task C completed.");
+    println!("Task D completed.");
     
-    //_________________________________________________________________________
-
-    // STEP: 5 => Add the reciever
-
-    // You can think of rx as a list of Strings,
-    // where each String is a status update from the the thread.
-    // Note that it is a String for this specific example because that is 
-    // what was declared in the channel.
-    for status_update in rx {
-        println!("status_update: {status_update}");
-    }
-
-    // The Receiver<T> implements the Iterator trait.
-    // The loop internally calls rx.recv() repeatedly.
-    // .recv() is blocking by default, 
-    // meaning it waits until a message is available.
+    task_a_thread.join().unwrap();
 
     //_________________________________________________________________________
-    
-    // STEP: 4 => Add the JoinHandle to ensure that the main thread does not
-    // exit before the loading_player_rankings_thread has finished as well.
-
-    loading_player_rankings_thread.join().unwrap();
-
-    //_________________________________________________________________________
-
-    println!("The main thread is done");
 }
 
-// NOTE: This should be the output
+/*
 
-// status_update: Loading player ranking data...
-// status_update: 25% done
-// status_update: 50% done
-// status_update: 75% done
-// status_update: The loading_player_rankings_thread is done.
-// The main thread is done
+    NOTE: This should be the final result
+
+    Started Task A...
+    Task A completed.
+    Task B completed.
+    Task C completed.
+    Task D completed.
+
+*/

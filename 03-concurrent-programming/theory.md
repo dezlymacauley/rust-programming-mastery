@@ -16,6 +16,7 @@ the illusion that these tasks are all progressing at the same time.
 Concurrency is different but related to concepts like parallelism 
 and asynchronus programming.
 
+The term concurrency is also refered to as multi-threading
 _______________________________________________________________________________
 
 parallelism = simulataneous execution of tasks

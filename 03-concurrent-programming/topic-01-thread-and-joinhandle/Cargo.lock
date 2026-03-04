@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "topic-02-spawning-and-joining-a-thread"
+name = "topic-01-process-and-thread"
 version = "0.1.0"

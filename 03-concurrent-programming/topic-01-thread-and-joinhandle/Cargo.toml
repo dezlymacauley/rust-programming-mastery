@@ -1,5 +1,5 @@
 [package]
-name = "topic-01-making-a-thread-sleep"
+name = "topic-01-process-and-thread"
 version = "0.1.0"
 edition = "2024"
 

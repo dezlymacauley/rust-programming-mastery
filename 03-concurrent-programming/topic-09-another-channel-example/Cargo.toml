@@ -1,5 +1,5 @@
 [package]
-name = "topic-05-recv"
+name = "topic-08-another-channel-example"
 version = "0.1.0"
 edition = "2024"
 
