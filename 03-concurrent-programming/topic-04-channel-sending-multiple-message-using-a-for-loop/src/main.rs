@@ -3,30 +3,33 @@
 
 */
 
-use std::sync::mpsc;
-use std::thread;
+use std::sync::mpsc::{channel, Sender, Receiver};
+
+use std::thread::{JoinHandle, sleep, spawn};
+
 use std::time::Duration;
 
 fn main() {
-    let (tx, rx) = mpsc::channel();
+    let (tx, rx): (Sender<String>, Receiver<String>) = channel();
 
-    thread::spawn(move || {
-        // Simulate log messages being produced over time
-        let logs = vec![
+    let data_processing_thread: JoinHandle<()> = spawn(move || {
+        let task_logs = vec![
             String::from("Connecting to server..."),
             String::from("Fetching data..."),
             String::from("Processing data..."),
             String::from("Task complete."),
         ];
 
-        for log in logs {
-            tx.send(log).unwrap();          // Send each message as it's ready
-            thread::sleep(Duration::from_secs(1)); // Simulate time delay
+        for log in task_logs {
+            // Send a message after each second
+            sleep(Duration::from_secs(1));
+            tx.send(log).unwrap();
         }
     });
 
-    // Main thread receives messages as they come
-    for received in rx {
-        println!("Got: {received}");
+    for status_update in rx {
+        println!("{status_update}");
     }
+
+    data_processing_thread.join().unwrap();
 }
