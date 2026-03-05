@@ -1,6 +1,0 @@
-[package]
-name = "topic-06-try-recv"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]

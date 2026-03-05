@@ -57,9 +57,33 @@ fn main() {
         }
     });
 
+    //_________________________________________________________________________
+   
+    // SECTION: Receiving Messages
+    
+    //_________________________________________________________________________
+
+    // TIP: Method 1 => Just use a for loop,
+    // this is the most idiomatic way in Rust
+
     for status_update in rx {
         println!("{status_update}");
     }
+    
+    //_________________________________________________________________________
+
+    // TIP: Method 2 => This is the equivalent way to do this using
+    // an infinite loop, with match and break
+
+    // loop {
+    //     match rx.recv() {
+    //         Ok(status_update) => println!("{status_update}"),
+    //         Err(_) => break
+    //     }
+    // }
+    
+    //_________________________________________________________________________
+
 
     // Remember to use the JoinHandle of both threads to ensure that the
     // thread `fn main()` does not exit before the data_processing_thread
