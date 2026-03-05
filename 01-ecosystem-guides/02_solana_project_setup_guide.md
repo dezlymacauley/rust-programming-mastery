@@ -11,6 +11,7 @@ Add these lines to your `.zprofile` file. This file is usually located at:
 ```sh
 export PATH="$HOME/.local/bin/solana-cli:$PATH"
 export PATH="$HOME/.local/bin/anchor-cli:$PATH"
+export PATH="$HOME/.local/bin/surfpool-cli:$PATH"
 ```
 
 This is where the executable binaries for the `Solana Cli`, `Anchor Cli`,
@@ -125,7 +126,32 @@ _______________________________________________________________________________
 Surfpool is a tool for local development and 
 an improved replacement for solana-test-validator. 
 
-Learn more about Surfpool features in the Surfpool documentation.
+You can get the binaries here
+```
+https://github.com/solana-foundation/surfpool/releases
+```
 
+Look for something like this:
+```
+v1.0.1 Latest
+
+chore(release): publish v1.0.1
+```
+
+Download this file
+```sh
+surfpool-linux-x64.tar.gz
+```
+
+Extract the file:
+```sh
+tar -xzf surfpool-linux-x64.tar.gz
+```
+
+It is a single file, so just move it to the correct location:
+```sh
+mkdir ~/.local/bin/surfpool-cli
+cp surfpool ~/.local/bin/surfpool-cli/
+chmod +x ~/.local/bin/surfpool-cli/surfpool
+```
 _______________________________________________________________________________
-
