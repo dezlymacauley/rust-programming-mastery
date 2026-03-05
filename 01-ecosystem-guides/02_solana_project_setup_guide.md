@@ -178,3 +178,74 @@ anchor --version
 surfpool --version
 ```
 _______________________________________________________________________________
+
+To get your Solana config:
+```sh
+solana config get
+```
+_______________________________________________________________________________
+
+To use a localhost:
+```sh
+solana config set -u l
+```
+_______________________________________________________________________________
+
+To use devnet (This is what I'll be using)
+```sh
+solana config set -u d
+```
+_______________________________________________________________________________
+
+To create a wallet
+```sh
+solana-keygen new
+```
+_______________________________________________________________________________
+
+To check your address (public key)
+```sh
+solana address
+```
+_______________________________________________________________________________
+
+### How to get test SOL (Fake currency for testing)
+
+First make sure that the Solana CLI is set to the correct network 
+where you are deploying your project to:
+
+E.g. I want to deploy to `devnet`
+
+```sh
+solana config set -u d
+```
+
+Now I want to request 1 SOL test SOL
+```sh
+solana airdrop 1
+```
+_______________________________________________________________________________
+
+If you have issues with the CLI, you can use the Solana Faucett:
+
+```
+https://faucet.solana.com/
+```
+_______________________________________________________________________________
+
+To check your wallet balance:
+```sh
+solana config set -u d
+solana balance
+```
+_______________________________________________________________________________
+
+How to run a local validator (A loca Solana blockchain)
+
+Open a seperate channel and run this command.
+
+```sh
+solana config set -u l
+solana-test-validator
+```
+_______________________________________________________________________________
