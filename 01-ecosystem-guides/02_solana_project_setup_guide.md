@@ -57,23 +57,24 @@ This a stable release suitable for Testnet, Devnet and Mainnet Beta.
 
 Scroll down to `Assets` and download this:
 ```
-solana-release-x86_64-apple-darwin.tar.bz2 
+solana-release-x86_64-unknown-linux-gnu.tar.bz2
 ```
 
 There should be a hash next to it that looks like this:
 ```
-sha256:db27a2743edabb4dcff204993b70ebec79f471a526ae88be90e1d8e2644d87e2
+sha256:8cffaecc3a5f3c47c8d8f94ea739c716fbae08683018fc29b65c3045a0e9bdd2
 ```
 
 Run `sha256sum` on the file to check if the commit hash matches the 
 one on GitHub:
 ```sh
-sha256sum -xjf solana-release-x86_64-apple-darwin.tar.bz2
+
+sha256sum solana-release-x86_64-unknown-linux-gnu.tar.bz2
 ```
 
 To extract the file:
 ```sh
-tar -xjf solana-release-x86_64-apple-darwin.tar.bz2
+tar -xjf solana-release-x86_64-unknown-linux-gnu.tar.bz2
 ```
 
 After extracting the file you should see this directory:
@@ -81,9 +82,9 @@ After extracting the file you should see this directory:
 solana-release
 ```
 
-Move the `solana-release` directory to `$HOME/.local/bin`
+Move the binaries in `solana-release` directory to `$HOME/.local/solana-cli/`
 ```sh
-mkdir $HOME/.local/bin/solana-cli
+mkdir -p $HOME/.local/bin/solana-cli
 find solana-release/bin -maxdepth 1 -type f -exec cp {} ~/.local/bin/solana-cli/ \;
 ```
 _______________________________________________________________________________
@@ -153,5 +154,27 @@ It is a single file, so just move it to the correct location:
 mkdir ~/.local/bin/surfpool-cli
 cp surfpool ~/.local/bin/surfpool-cli/
 chmod +x ~/.local/bin/surfpool-cli/surfpool
+```
+_______________________________________________________________________________
+
+### To confirm that everything is working, run this command
+
+Rust
+```sh
+rustc --version
+cargo --version
+```
+
+Node.js and Yarn
+```sh
+node --version
+yarn --version
+```
+
+Solana CLI, Anchor CLI, Surfpool Clis
+```sh
+solana --version
+anchor --version
+surfpool --version
 ```
 _______________________________________________________________________________
