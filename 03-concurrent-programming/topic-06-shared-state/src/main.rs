@@ -7,7 +7,7 @@
     program to safety share the same data. E.g. Multiple parts of the program
     reading a value, or being able to modify that value.
 
-    Think of a mutex as a digital security gaurd that only allows
+    Think of a mutex as a digital security guard that only allows
     one thread to access the data at a given time.
 
     That thread must first signal to the mutext that
@@ -34,7 +34,7 @@ fn main() {
 
     //_________________________________________________________________________
 
-    // SECTION: How to read data gaurded by a mutex
+    // SECTION: How to read data guarded by a mutex
 
     // Create a temporary variable to access the data by requesting a lock
     // from the mutex
@@ -47,13 +47,15 @@ fn main() {
     // So println!("my_data: {my_data}"); will work as well...
     // I just prefer to be explicit and consistent.
 
+    // Remember to release the lock after each access,
+    // it does not matter if you are reading or writing from the data.
     drop(my_data);
 
     //_________________________________________________________________________
 
     // SECTION: How to modify the data guarded by a mutex
 
-    // How to read data gaurded by a mutex
+    // How to read data guarded by a mutex
     let mut my_data = guarded_data.lock().unwrap();
     *my_data = 6;
     drop(my_data);
