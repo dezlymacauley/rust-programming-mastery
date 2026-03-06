@@ -277,15 +277,98 @@ _______________________________________________________________________________
 
 ## How to create a native Solana project (No framework)
 
+Create the project directory
 ```sh
 mkdir name-of-project
 ```
 
+Enter the project directory
 ```sh
 cd name-of-project
 ```
+_______________________________________________________________________________
+
+### Initialized the project directory
+
+```sh
+cargo init --lib --vcs none
+```
+
+The reason you add `--lib` is because your project needs 
+to be library crate.
+
+A Solana program is compiled as a library,
+not a standalone executable.
+
+The `--vcs none` flag tells Rust not to setup a version control system
+in the project repo. I prefer to setup Git myself.
+_______________________________________________________________________________
+
+### Delete the contents of `src/lib.rs`
+
+```sh
+truncate -s 0 src/lib.rs
+```
+_______________________________________________________________________________
+
+### Create a `.gitignore` file
+
+```sh
+touch .gitignore
+```
+_______________________________________________________________________________
+
+Add this to the `.gitignore` file
+```gitignore
+# Build output
+target/
+```
+_______________________________________________________________________________
+
+### Create a `rustfmt.toml` file
+
+```sh
+touch rustfmt.toml
+```
+
+This file is used to control your settings of `rustfmt`,
+which is Rust's built-in code formatter.
+
+Add this to the rustfmt.toml file
+```toml
+max_width = 80
+tab_spaces = 4
+trailing_comma = "Never"
+```
+_______________________________________________________________________________
+
+### Ensure that the project is reproducible
+
+Create a `rust-toolchain.toml` file
+```sh
+touch rust-toolchain.toml
+```
+_______________________________________________________________________________
+
+Add this to the file
+```toml
+[toolchain]
+channel = "1.94.0"
+components = ["rust-analyzer"]
+```
+
+Then build the project
+```toml
+cargo build
+```
+
+When you run the `cargo build` command, 
+rustup will have a check the `rust-toolchain.toml` file and ensure that the
+project is using the specific channel that was specified in the file 
+and that `rust-analyzer` is installed for that specific toolchain. 
 
 _______________________________________________________________________________
+
 
 `sbf` stands for Solana binary format
 
