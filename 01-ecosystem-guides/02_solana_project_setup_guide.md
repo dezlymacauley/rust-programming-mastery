@@ -9,7 +9,7 @@ Add these lines to your `.zprofile` file. This file is usually located at:
 `$HOME/.zprofile`
 
 ```sh
-export PATH="$HOME/.local/bin/solana-cli:$PATH"
+export PATH="$HOME/.local/share/solana-cli/bin:$PATH"
 export PATH="$HOME/.local/bin/anchor-cli:$PATH"
 export PATH="$HOME/.local/bin/surfpool-cli:$PATH"
 ```
@@ -35,6 +35,26 @@ sudo pacman -S --needed nodejs
 A JavaScript package manager required by the Anchor smart contract framework
 ```sh
 sudo pacman -S --needed yarn
+```
+_______________________________________________________________________________
+
+### Get the Operating system name and architecture of your machine
+
+Run this command to get the Operating System
+```sh
+uname
+```
+_______________________________________________________________________________
+
+Run this command to get the system architecture
+```sh
+uname -m
+```
+_______________________________________________________________________________
+
+My machine is:
+```
+Linux x86_64
 ```
 _______________________________________________________________________________
 
@@ -65,7 +85,7 @@ There should be a hash next to it that looks like this:
 sha256:8cffaecc3a5f3c47c8d8f94ea739c716fbae08683018fc29b65c3045a0e9bdd2
 ```
 
-Run `sha256sum` on the file to check if the commit hash matches the 
+Run `sha256sum` on the file to check if the hash matches the 
 one on GitHub:
 ```sh
 
@@ -82,10 +102,15 @@ After extracting the file you should see this directory:
 solana-release
 ```
 
-Move the binaries in `solana-release` directory to `$HOME/.local/solana-cli/`
+Note: This `solana-release` directory is a bundle 
+and not a single file binary so it needs to be placed in this location:
+```
+$HOME/.local/share/
+```
+
+Move it by running this command:
 ```sh
-mkdir -p $HOME/.local/bin/solana-cli
-find solana-release/bin -maxdepth 1 -type f -exec cp {} ~/.local/bin/solana-cli/ \;
+mv solana-release $HOME/.local/share/solana-cli
 ```
 _______________________________________________________________________________
 
@@ -247,5 +272,24 @@ Open a seperate channel and run this command.
 ```sh
 solana config set -u l
 solana-test-validator
+```
+_______________________________________________________________________________
+
+## How to create a native Solana project (No framework)
+
+```sh
+mkdir name-of-project
+```
+
+```sh
+cd name-of-project
+```
+
+_______________________________________________________________________________
+
+`sbf` stands for Solana binary format
+
+```sh
+cargo build-sbf
 ```
 _______________________________________________________________________________
